@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - V-Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+      }
+      /* Dark mode styles */
+      body.dark {
+        background-color: #1a202c; /* Dark background */
+        color: #e2e8f0; /* Light text */
+      }
+      body.dark .bg-white {
+        background-color: #2d3748; /* Darker background for white elements */
+      }
+      body.dark .text-gray-800 {
+        color: #e2e8f0; /* Light text for dark mode headings */
+      }
+      body.dark .text-gray-600 {
+        color: #cbd5e0; /* Lighter text for dark mode paragraphs */
+      }
+      body.dark .shadow-sm {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+      body.dark .bg-[#EBF2FF] {
+        background-color: #283750; /* Custom dark background for this section */
+      }
+      body.dark .bg-gray-100 {
+        background-color: #1a202c;
+      }
+      body.dark .text-gray-500 {
+        color: #a0aec0;
+      }
+      body.dark .bg-blue-950 {
+        background-color: #1a202c;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <img
+              class="h-8 w-auto"
+              src="../Picture for Mini project/image 6-1.png"
+              alt="Vrean Logo"
+            />
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="./after-login.html"
+                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="./about.html"
+                class="text-blue-600 font-semibold px-3 py-2 rounded-md text-sm font-medium"
+                aria-current="page"
+                >About Us</a
+              >
+              <a
+                href="./course.html"
+                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Courses</a
+              >
+              <a
+                href="./Blog.html"
+                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Blog</a
+              >
+              <a
+                href="./contact.html"
+                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button
+              id="darkModeToggle"
+              class="text-gray-500 hover:text-blue-600 focus:outline-none"
+            >
+              <i class="fas fa-moon text-xl"></i>
+            </button>
+            <img
+              class="h-8 w-8 rounded-full"
+              src="../Picture for Mini project/teacher-hold.png"
+              alt="User Profile"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div
+        class="bg-blue-950 text-white"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">About Us</h1>
+          <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
+            At VRean, providing the best opportunities to the students around
+            the glob.
+          </p>
+          <a
+            href="#"
+            class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+            >See more</a
+          >
+        </div>
+      </div>
+
+      <div class="bg-[#EBF2FF] py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl font-bold text-center text-gray-800 mb-12"
+            data-aos="fade-up"
+          >
+            Preparing Students to Achieve Success
+          </h2>
+
+          <div
+            class="flex flex-col md:flex-row items-center mb-16"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="md:w-1/2 md:pr-12">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Empowering Confident and Capable Learners
+              </h3>
+              <p class="text-gray-600 mb-6">
+                At VRean, we focus on helping students grow into confident,
+                independent thinkers. Our platform nurtures success by promoting
+                critical skills, curiosity, and a love for learning that lasts a
+                lifetime.
+              </p>
+              <a
+                href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+                >See more</a
+              >
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+              <img
+                src="../Picture for Mini project/image 121.png"
+                alt="Student learning on a laptop"
+                class="rounded-lg shadow-lg w-full"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row-reverse items-center mb-16"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="md:w-1/2 md:pl-12">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                A Learning Experience Like No Other
+              </h3>
+              <p class="text-gray-600 mb-6">
+                We provide more than just lessons we create immersive and
+                engaging classrooms. With interactive tools, real-time feedback,
+                and a supportive environment, every student can enjoy learning
+                their own way.
+              </p>
+              <a
+                href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+                >See more</a
+              >
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+              <img
+                src="../Picture for Mini project/image 119.png"
+                alt="A person engaged in online learning"
+                class="rounded-lg shadow-lg w-full"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row items-center"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div class="md:w-1/2 md:pr-12">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Inspiring Teachers Who Make a Difference
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Behind every successful learner is a passionate educator. Our
+                instructors are committed to student growth, bringing expertise,
+                energy, and empathy into every session.
+              </p>
+              <a
+                href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+                >See more</a
+              >
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+              <img
+                src="../Picture for Mini project/image 122.png"
+                alt="Teacher mentoring a student"
+                class="rounded-lg shadow-lg w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+            Our Mentors
+          </h2>
+          <div
+            class="flex justify-center mb-12"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+              <img
+                src="../Picture for Mini project/image 104.png"
+                alt="Mentor"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-xl font-semibold">Srorng Sokcheat</h4>
+              <a href="#" class="hover:text-blue-600"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="hover:text-blue-600"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="hover:text-blue-600"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mb-8" data-aos="fade-up">
+            Our Team
+          </h2>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"
+          >
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="../Picture for Mini project/image 110.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-xl font-semibold">Chhom Senghour</h4>
+              <div class="flex justify-center space-x-4 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <img
+                src="../Picture for Mini project/image 109.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-xl font-semibold">So Samponleu</h4>
+              <div class="flex justify-center space-x-4 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <img
+                src="../Picture for Mini project/image 108.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-xl font-semibold">Yin Wattana</h4>
+              <div class="flex justify-center space-x-4 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <img
+                src="../Picture for Mini project/image 105.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-lg font-semibold">Luy Lyhai</h4>
+              <div class="flex justify-center space-x-3 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <img
+                src="../Picture for Mini project/image 107.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-lg font-semibold">Sroeum saren</h4>
+              <div class="flex justify-center space-x-3 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <img
+                src="../Picture for Mini project/image 106.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-lg font-semibold">Chum menghoung</h4>
+              <div class="flex justify-center space-x-3 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg text-center"
+              data-aos="zoom-in"
+              data-aos-delay="700"
+            >
+              <img
+                src="../Picture for Mini project/image 117.png"
+                alt="Team member"
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h4 class="text-lg font-semibold">Chrach savoeun</h4>
+              <div class="flex justify-center space-x-3 mt-2 text-gray-500">
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+     <footer class="footer-bg text-white py-12 px-6 md:px-12 lg:px-24 rounded-t-lg bg-blue-950">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+        <!-- Organized By -->
+        <div>
+            <h3 class="text-xl text-center font-bold mb-4">Organized By</h3>
+            <div class="flex flex-col items-center mb-2 text-center gap-5">
+                <img src="../Picture for Mini project/image 92-1.png" alt="Company A" class="h-20 w-20 rounded-full mr-2">
+                <p>Insitute of Science and Technology Advance Development</p>
+            </div>
+            
+        </div>
+
+        <!-- Sponsored By -->
+        <div class="text-center  flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-4">Sponsor By</h3>
+            <div class=" w-20 h-20 rounded-full bg-white flex flex-col justify-center items-center mb-5">
+                <img src="../Picture for Mini project/image 6-1.png" alt="">
+            </div>
+            <p>VRean</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul>
+                <li class="mb-2"><a href="#" class="hover:text-blue-400">Home</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-400">Courses</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-400">About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <h3 class="text-xl font-bold mb-4">Legal</h3>
+            <ul>
+                <li class="mb-2"><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                <li class="mb-2"><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="text-center">
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <div class="flex justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Social Section -->
+    <div class="text-center mt-8 pt-8 border-t border-gray-700">
+        
+        <p class="text-gray-500 text-sm mt-4">&copy; 2023 Vlearn. All rights reserved.</p>
+    </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        once: true, // Whether animation should happen only once - while scrolling down
+        // duration: 1000, // values from 0 to 3000, with step 50ms
+        // easing: 'ease-in-out', // default easing for AOS animations
+        // delay: 100, // values from 0 to 3000, with step 50ms
+        // offset: 120, // offset (in px) from the original trigger point
+      });
+
+      // Dark Mode Toggle Logic
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+      // Function to set the theme
+      function setTheme(isDark) {
+        if (isDark) {
+          body.classList.add("dark");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun text-xl"></i>'; // Sun icon for dark mode
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon text-xl"></i>'; // Moon icon for light mode
+          localStorage.setItem("theme", "light");
+        }
+      }
+
+      // Check for saved theme preference or system preference on load
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme === "dark");
+      } else {
+        setTheme(prefersDarkMode.matches); // Use system preference
+      }
+
+      // Listen for changes in system dark mode preference
+      prefersDarkMode.addEventListener("change", (e) => {
+        setTheme(e.matches);
+      });
+
+      // Toggle theme on button click
+      darkModeToggle.addEventListener("click", () => {
+        setTheme(!body.classList.contains("dark"));
+      });
+    </script>
+  </body>
+</html>
