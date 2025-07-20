@@ -1,387 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation with Profile Dropdown</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* Use Inter font family */
-        body {
-            font-family: 'Inter', sans-serif;
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navigation with Profile Dropdown</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+          /* Use Inter font family */
+          body {
+            font-family: "Inter", sans-serif;
             background-color: #f9fafb; /* bg-gray-50 */
-        }
-    </style>
-</head>
-<body>
-        <header class="bg-white shadow-sm rounded-lg block sticky top-0 z-40" data-aos="fade-down">
-            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        <img src="../Picture for Mini project/image 6-1.png" alt="">
-                    </div>
-                    <span class="text-xl font-bold text-gray-800">E-Learning</span>
-                </div>
-    
-                <ul class="hidden md:flex items-center space-x-8">
-                    <li><a href="../index.html" class="text-gray-600 hover:text-blue-600">Home</a></li>
-                    <li><a href="./about.html" class="text-gray-600 hover:text-blue-600">About Us</a></li>
-                    <li><a href="./course.html" class="text-gray-600 hover:text-blue-600">Courses</a></li>
-                    <li><a href="./Blog.html" class="text-gray-600 hover:text-blue-600">Blog</a></li>
-                    <li><a href="./contact.html" class="text-gray-600 hover:text-blue-600">Contact</a></li>
-                </ul>
-                <div class="relative flex items-center gap-5">
-                    <i class=" text-2xl fa-solid fa-moon cursor-pointer"></i>
-                    <div id="user-menu-button" class="flex items-center space-x-4 cursor-pointer">
-                        <img src="../Picture for Mini project/image 12-1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
-                    </div>
-                </div>
-            </nav>
+          }
+        </style>
+      </head>
+      <body>
+        <header
+          class="bg-white shadow-sm rounded-lg block sticky top-0 z-40"
+          data-aos="fade-down"
+        >
+          <nav
+            class="container mx-auto px-6 py-4 flex justify-between items-center"
+          >
+            <div class="flex items-center space-x-2">
+              <div
+                class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-white font-bold text-lg"
+              >
+                <img src="../Picture for Mini project/image 6-1.png" alt="" />
+              </div>
+              <span class="text-xl font-bold text-gray-800">VRean</span>
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8">
+              <li>
+                <a
+                  href="./after-login.html"
+                  class="text-gray-600 hover:text-blue-600"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="text-gray-600 hover:text-blue-600"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./course.html"
+                  class="text-gray-600 hover:text-blue-600"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a href="./Blog.html" class="text-gray-600 hover:text-blue-600"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="text-gray-600 hover:text-blue-600"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div class="relative flex items-center gap-5">
+              <div
+                id="user-menu-button"
+                class="flex items-center space-x-4 cursor-pointer"
+              >
+                <img
+                  src="../Picture for Mini project/image 12-1.png"
+                  alt="User Avatar"
+                  class="w-10 h-10 rounded-full"
+                />
+              </div>
+            </div>
+          </nav>
         </header>
-        <div class=" md:p-8 lg:p-20 bg-blue-50">
-            <h1 class="ms font-bold text-blue-950 text-3xl" data-aos="fade-right">Welcome Back,ready for your next lesson?</h1>
-            <section class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up">
-                    <img src="../Picture for Mini project/image 80.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-5">Itorduction to Web Design</h3>
-                    <p class="text-base text-gray-800 my-5">Learn the basic of HTML, CSS, and Javascript to create stunning websites.</p>
-                    <p class="text-gray-700"><i class="fa-regular fa-clock"></i> 2 hours left</p>
-                    <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">Continue</button>
-                </article>
-                <article class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../Picture for Mini project/image 81.png" alt="" class="rounded-xl block">
-                    <h3 class="font-bold text-xl my-5">Advanced Python Programming</h3>
-                    <p class="text-base text-gray-800 my-5">Dive deep into Python's advanced features and build complex applications.</p>
-                    <p class="text-gray-700"><i class="fa-regular fa-clock"></i> 3 hours left</p>
-                    <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">Continue</button>
-                </article>
-                <article class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../Picture for Mini project/image 82.png" alt="" class="rounded-xl w- block">
-                    <h3 class="font-bold text-xl my-5">Digital Marketing Fundamentals</h3>
-                    <p class="text-base text-gray-800 my-5">Master the essentials of SEO, social media, and content marketing</p>
-                    <p class="text-gray-700"><i class="fa-regular fa-clock"></i> 1.5 hours left</p>
-                    <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">Continue</button>
-                </article>
-             </section>
-            <h1 class=" font-bold text-blue-950 text-xl my-16" data-aos="fade-right">Welcome Back,ready for your next lesson?</h1>
-             <section class="md:p-8 lg:p-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
+        <div class="md:p-8 lg:p-20 bg-blue-50">
+          <h1 class="ms font-bold text-blue-950 text-3xl" data-aos="fade-right">
+            Welcome Back,ready for your next lesson?
+          </h1>
+          <section
+            class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <article
+              class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+            >
+              <img
+                src="../Picture for Mini project/image 80.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-5">Itorduction to Web Design</h3>
+              <p class="text-base text-gray-800 my-5">
+                Learn the basic of HTML, CSS, and Javascript to create stunning
+                websites.
+              </p>
+              <p class="text-gray-700">
+                <i class="fa-regular fa-clock"></i> 2 hours left
+              </p>
+              <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">
+                Continue
+              </button>
+            </article>
+            <article
+              class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="../Picture for Mini project/image 81.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-5">
+                Advanced Python Programming
+              </h3>
+              <p class="text-base text-gray-800 my-5">
+                Dive deep into Python's advanced features and build complex
+                applications.
+              </p>
+              <p class="text-gray-700">
+                <i class="fa-regular fa-clock"></i> 3 hours left
+              </p>
+              <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">
+                Continue
+              </button>
+            </article>
+            <article
+              class="bg-white p-10 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="../Picture for Mini project/image 82.png"
+                alt=""
+                class="rounded-xl w- block"
+              />
+              <h3 class="font-bold text-xl my-5">
+                Digital Marketing Fundamentals
+              </h3>
+              <p class="text-base text-gray-800 my-5">
+                Master the essentials of SEO, social media, and content
+                marketing
+              </p>
+              <p class="text-gray-700">
+                <i class="fa-regular fa-clock"></i> 1.5 hours left
+              </p>
+              <button class="bg-blue-600 mt-2 rounded-2xl py-2 px-6 text-white">
+                Continue
+              </button>
+            </article>
+          </section>
+          <h1
+            class="font-bold text-blue-950 text-xl my-16"
+            data-aos="fade-right"
+          >
+            Explore Top Categories
+          </h1>
+          <section
+            class="md:p-8 lg:p-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5"
+          >
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <h3 class="text-base text-center">UI/UX Design</h3>
+            </article>
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="text-base text-center">Development</h3>
+            </article>
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <h3 class="text-base text-center">Business</h3>
+            </article>
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-camera"></i>
+              </div>
+              <h3 class="text-base text-center">Photography</h3>
+            </article>
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3 class="text-base text-center">Marketing</h3>
+            </article>
+            <article
+              class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="zoom-in"
+              data-aos-delay="250"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white text-2xl"
+              >
+                <i class="fa-solid fa-paint-brush"></i>
+              </div>
+              <h3 class="text-base text-center">Art & Design</h3>
+            </article>
+          </section>
+          <h1
+            class="font-bold text-blue-950 text-xl my-16"
+            data-aos="fade-right"
+          >
+            Recommended for you
+          </h1>
+          <section
+            class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-right"
+            >
+              <img
+                src="../Picture for Mini project/image 83-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
+              <p class="text-base text-gray-800">
+                Learn the fundamentals of user interface and user experience
+                design
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700">
+                  <i class="fa-regular fa-clock"></i> 2 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.8(120 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Jonh Doe</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$49</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <img
+                src="../Picture for Mini project/image 84-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Frontend Web Development</h3>
+              <p class="text-base text-gray-800">
+                Build responsive and interactive websites with modern
+                technologies.
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 15 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.9(150 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Jane Smith</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$59</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <img
+                src="../Picture for Mini project/image 85-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Data Science with Python</h3>
+              <p class="text-base text-gray-800">
+                Analyze and visualize data using Python's powerful libraries.
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 20 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.7(100 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Robert Jonhson</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$79</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <img
+                src="../Picture for Mini project/image 86-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Graphic Design Masterclass</h3>
+              <p class="text-base text-gray-800">
+                Unleash your creativity and master graphic design tools and
+                principles
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 20 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.7(100 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Emily White</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$69</span>
+              </div>
+            </article>
+          </section>
+          <h1
+            class="font-bold text-blue-950 text-xl my-16"
+            data-aos="fade-right"
+          >
+            New Courses
+          </h1>
+          <section
+            class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+            >
+              <img
+                src="../Picture for Mini project/image 87.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Mobile App Development</h3>
+              <p class="text-base text-gray-800">
+                Build native mobile applications for iOS and Android platforms.
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700">
+                  <i class="fa-regular fa-clock"></i> 18 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.7(90 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>David Lee</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$89</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="../Picture for Mini project/image 88.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Cloud Computing Basics</h3>
+              <p class="text-base text-gray-800">
+                Understand the fundamentals of cloud platforms like AWS and
+                Azure.
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 8 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.6(75 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Sarah Chen</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$39</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="../Picture for Mini project/image 89.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Cyber Security</h3>
+              <p class="text-base text-gray-800">
+                Project your data and systems from cyber threats.
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 14 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.7(110 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Michael Brown</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$75</span>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="../Picture for Mini project/image 90.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Video Editing Pro</h3>
+              <p class="text-base text-gray-800">
+                Master Video Editing techniques with industry-standard sofware
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <p class="text-gray-700 mt-2 text-sm">
+                  <i class="fa-regular fa-clock"></i> 10 hours
+                </p>
+                <i class="text-orange-400 fa-solid fa-star"></i>
+                <p>4.9(95 reviews)</p>
+              </div>
+              <div class="flex justify-between mt-4 items-center">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500"
+                  >
+                    P
+                  </div>
+                  <h5>Jessica Green</h5>
+                </div>
+                <span class="text-blue-500 font-bold text-xl">$69</span>
+              </div>
+            </article>
+          </section>
+          <h1
+            class="font-bold text-blue-950 text-xl my-16"
+            data-aos="fade-right"
+          >
+            Students reviews
+          </h1>
+          <div
+            class="bg-blue-950 rounded-2xl px-6 py-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10"
+            data-aos="flip-up"
+          >
+            <h3 class="text-white font-bold text-2xl text-center sm:text-left">
+              Online coaching lessons for remote learning
+            </h3>
+            <button
+              class="text-white text-base bg-blue-500 rounded-xl font-bold px-6 py-3 hover:bg-blue-600 transition duration-300"
+            >
+              Start Learning Now
+            </button>
+          </div>
 
-                    </div>
-                    <h3 class="text-base text-center">UI/UX Design</h3>
-                </article>
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in" data-aos-delay="50">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
-
-                    </div>
-                    <h3 class="text-base text-center">Development</h3>
-                </article>
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
-
-                    </div>
-                    <h3 class="text-base text-center">Business</h3>
-                </article>
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
-
-                    </div>
-                    <h3 class="text-base text-center">Photography</h3>
-                </article>
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
-
-                    </div>
-                    <h3 class="text-base text-center">Marketing</h3>
-                </article>
-                <article class="flex justify-center items-center bg-white rounded-2xl shadow px-10 py-5 flex-col gap-5 transition duration-300 hover:shadow-lg hover:scale-105" data-aos="zoom-in" data-aos-delay="250">
-                    <div class="w-10 h-10 rounded-full bg-blue-400">
-
-                    </div>
-                    <h3 class="text-base text-center">Art & Design</h3>
-                </article>
-             </section>
-            <h1 class=" font-bold text-blue-950 text-xl my-16" data-aos="fade-right">Recommended for you</h1>
-             <section class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-right">
-                    <img src="../Picture for Mini project/image 83-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
-                    <p class="text-base text-gray-800">Learn the fundamentals of user interface and user experience design</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700"><i class="fa-regular fa-clock"></i> 2 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.8(120 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Jonh Doe</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$49</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-right" data-aos-delay="100">
-                    <img src="../Picture for Mini project/image 84-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Frontend Web Development</h3>
-                    <p class="text-base text-gray-800">Build responsive and interactive websites with modern technologies.</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 15 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.9(150 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Jane Smith</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$59</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-left" data-aos-delay="200">
-                    <img src="../Picture for Mini project/image 85-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Data Science with Python</h3>
-                    <p class="text-base text-gray-800">Analyze and visualize data using Python's powerful libraries.</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 20 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.7(100 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Robert Jonhson</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$79</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-left" data-aos-delay="300">
-                    <img src="../Picture for Mini project/image 86-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Graphic Design Masterclass</h3>
-                    <p class="text-base text-gray-800">Unleash your creativity and master graphic design tools and principles</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 20 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.7(100 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Emily White</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$69</span>
-                    </div>
-                </article>
-             </section>
-            <h1 class=" font-bold text-blue-950 text-xl my-16" data-aos="fade-right">New Courses</h1>
-            <section class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up">
-                    <img src="../Picture for Mini project/image 87.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Mobile App Development</h3>
-                    <p class="text-base text-gray-800">Build native mobile applications for iOS and Android platforms.</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700"><i class="fa-regular fa-clock"></i> 18 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.7(90 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>David Lee</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$89</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../Picture for Mini project/image 88.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Cloud Computing Basics</h3>
-                    <p class="text-base text-gray-800">Understand the fundamentals of cloud platforms like AWS and Azure.</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 8 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.6(75 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Sarah Chen</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$39</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../Picture for Mini project/image 89.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Cyber Security</h3>
-                    <p class="text-base text-gray-800">Project your data and systems from cyber threats.</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 14 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.7(110 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Michael Brown</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$75</span>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <img src="../Picture for Mini project/image 90.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Video Editing Pro</h3>
-                    <p class="text-base text-gray-800">Master Video Editing techniques with industry-standard sofware</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <p class="text-gray-700 mt-2 text-sm"><i class="fa-regular fa-clock"></i> 10 hours</p>
-                        <i class="text-orange-400 fa-solid fa-star"></i>
-                        <p>4.9(95 reviews)</p>
-                    </div>
-                    <div class="flex justify-between mt-4 items-center">
-                        <div class="flex gap-2 items-center">
-                            <div class="w-10 h-10 rounded-full flex justify-center items-center font-bold text-white bg-gray-500">P</div>
-                            <h5>Jessica Green</h5>
-                        </div>
-                        <span class="text-blue-500 font-bold text-xl">$69</span>
-                    </div>
-                </article>
-             </section>
-            <h1 class=" font-bold text-blue-950 text-xl my-16" data-aos="fade-right">Students reviews</h1>
-             <div class="bg-blue-950 rounded-2xl px-6 py-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10" data-aos="flip-up">
-                <h3 class="text-white font-bold text-2xl text-center sm:text-left">
-                    Online coaching lessons for remote learning
-                </h3>
-                <button class="text-white text-base bg-blue-500 rounded-xl font-bold px-6 py-3 hover:bg-blue-600 transition duration-300">
-                    Start Learning Now
-                </button>
-            </div>
-
-            <h1 class=" font-bold text-blue-950 text-xl my-16" data-aos="fade-right">Students reviews</h1>
-             <section class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up">
-                    <img src="../Picture for Mini project/image 83-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
-                    <p class="text-base text-gray-800">"This course was amazing! I learned so much and the instructor was fantastic"</p>
-                    <div class="flex items-center gap-6 mt-2 text-sm">
-                        <div class="flex gap-2 items-center">
-                            <i class="text-orange-400 fa-solid fa-star"></i>
-                            <p>5.0</p>
-                        </div>
-                        <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
-                        <p class="">Philip Bi</p>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../Picture for Mini project/image 84-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Frontend Web Development</h3>
-                    <p class="text-base text-gray-800">"Highly recommended this course! The content is well-structured and easy to follow"</p>
-                    <div class="flex items-center gap-6 mt-2 text-sm">
-                        <div class="flex gap-2 items-center">
-                            <i class="text-orange-400 fa-solid fa-star"></i>
-                            <p>4.9</p>
-                        </div>
-                        <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
-                        <p class="">Tom L</p>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../Picture for Mini project/image 85-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">Data Science with Python</h3>
-                    <p class="text-base text-gray-800">"A must-take for anyone interested in data science. Very practiceal and insightful."</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <div class="flex gap-2 items-center">
-                            <i class="text-orange-400 fa-solid fa-star"></i>
-                            <p>4.8</p>
-                        </div>
-                        <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
-                        <p class="">Anna P</p>
-                    </div>
-                </article>
-                <article class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <img src="../Picture for Mini project/image 86-1.png" alt="" class="rounded-xl block ">
-                    <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
-                    <p class="text-base text-gray-800">"This course was amazing! I learned so much and the instructor was fantastic"</p>
-                    <div class="flex items-center gap-8 mt-2 text-sm">
-                        <div class="flex gap-2 items-center">
-                            <i class="text-orange-400 fa-solid fa-star"></i>
-                            <p>5.0</p>
-                        </div>
-                        <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
-                        <p class="">Cris M.</p>
-                    </div>
-                </article>
-             </section>
-            </div>
-        <footer class="footer-bg text-white py-12 px-6 md:px-12 lg:px-24 rounded-t-lg bg-blue-950" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        <div>
-            <h3 class="text-xl text-center font-bold mb-4">Organized By</h3>
-            <div class="flex flex-col items-center mb-2 text-center gap-5">
-                <img src="../Picture for Mini project/image 92-1.png" alt="Company A" class="h-20 w-20 rounded-full mr-2">
+          <h1
+            class="font-bold text-blue-950 text-xl my-16"
+            data-aos="fade-right"
+          >
+            What Our Students Say
+          </h1>
+          <section
+            class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+            >
+              <img
+                src="../Picture for Mini project/image 83-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
+              <p class="text-base text-gray-800">
+                "This course was amazing! I learned so much and the instructor
+                was fantastic"
+              </p>
+              <div class="flex items-center gap-6 mt-2 text-sm">
+                <div class="flex gap-2 items-center">
+                  <i class="text-orange-400 fa-solid fa-star"></i>
+                  <p>5.0</p>
+                </div>
+                <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
+                <p class="">Philip Bi</p>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="../Picture for Mini project/image 84-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Frontend Web Development</h3>
+              <p class="text-base text-gray-800">
+                "Highly recommended this course! The content is well-structured
+                and easy to follow"
+              </p>
+              <div class="flex items-center gap-6 mt-2 text-sm">
+                <div class="flex gap-2 items-center">
+                  <i class="text-orange-400 fa-solid fa-star"></i>
+                  <p>4.9</p>
+                </div>
+                <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
+                <p class="">Tom L</p>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="../Picture for Mini project/image 85-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">Data Science with Python</h3>
+              <p class="text-base text-gray-800">
+                "A must-take for anyone interested in data science. Very
+                practiceal and insightful."
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <div class="flex gap-2 items-center">
+                  <i class="text-orange-400 fa-solid fa-star"></i>
+                  <p>4.8</p>
+                </div>
+                <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
+                <p class="">Anna P</p>
+              </div>
+            </article>
+            <article
+              class="bg-white p-5 rounded-xl shadow transition duration-300 hover:shadow-lg hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="../Picture for Mini project/image 86-1.png"
+                alt=""
+                class="rounded-xl block"
+              />
+              <h3 class="font-bold text-xl my-2">UX/UI Design for Beginners</h3>
+              <p class="text-base text-gray-800">
+                "This course was amazing! I learned so much and the instructor
+                was fantastic"
+              </p>
+              <div class="flex items-center gap-8 mt-2 text-sm">
+                <div class="flex gap-2 items-center">
+                  <i class="text-orange-400 fa-solid fa-star"></i>
+                  <p>5.0</p>
+                </div>
+                <span class="block w-2 h-2 rounded-full bg-gray-600"></span>
+                <p class="">Cris M.</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <footer
+          class="footer-bg text-white py-12 px-6 md:px-12 lg:px-24 rounded-t-lg bg-blue-950"
+          data-aos="fade-up"
+        >
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+            <div>
+              <h3 class="text-xl text-center font-bold mb-4">Organized By</h3>
+              <div class="flex flex-col items-center mb-2 text-center gap-5">
+                <img
+                  src="../Picture for Mini project/image 92-1.png"
+                  alt="Company A"
+                  class="h-20 w-20 rounded-full mr-2"
+                />
                 <p>Insitute of Science and Technology Advance Development</p>
+              </div>
             </div>
-            
-        </div>
 
-        <div class="text-center  flex flex-col items-center">
-            <h3 class="text-xl font-bold mb-4">Sponsor By</h3>
-            <div class=" w-20 h-20 rounded-full bg-white flex flex-col justify-center items-center mb-5">
-                <img src="../Picture for Mini project/image 6-1.png" alt="">
+            <div class="text-center flex flex-col items-center">
+              <h3 class="text-xl font-bold mb-4">Sponsor By</h3>
+              <div
+                class="w-20 h-20 rounded-full bg-white flex flex-col justify-center items-center mb-5"
+              >
+                <img src="../Picture for Mini project/image 6-1.png" alt="" />
+              </div>
+              <p>VRean</p>
             </div>
-            <p>VRean</p>
-        </div>
 
-        <div>
-            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Home</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Courses</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">About Us</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-xl font-bold mb-4">Legal</h3>
-            <ul>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
-            </ul>
-        </div>
-
-        <div class="text-center">
-            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-            <div class="flex justify-center space-x-6 text-2xl">
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+            <div>
+              <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+              <ul>
+                <li class="mb-2">
+                  <a href="#" class="hover:text-blue-400">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="hover:text-blue-400">Courses</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="hover:text-blue-400">About Us</a>
+                </li>
+              </ul>
             </div>
-        </div>
-    </div>
 
-    <div class="text-center mt-8 pt-8 border-t border-gray-700">
-        
-        <p class="text-gray-500 text-sm mt-4">&copy; 2023 Vlearn. All rights reserved.</p>
-    </div>
-    </footer>
-         <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
-</html>
-</body>
+            <div>
+              <h3 class="text-xl font-bold mb-4">Legal</h3>
+              <ul>
+                <li class="mb-2">
+                  <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="hover:text-blue-400">Terms of Service</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+              <div class="flex justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-blue-400"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-blue-400"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-blue-400"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-blue-400"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-8 pt-8 border-t border-gray-700">
+            <p class="text-gray-500 text-sm mt-4">
+              &copy; 2023 VRean. All rights reserved.
+            </p>
+          </div>
+        </footer>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+      </body>
+    </html>
+  </body>
 </html>

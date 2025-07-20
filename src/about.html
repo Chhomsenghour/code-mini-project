@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - V-Master</title>
+    <link rel="stylesheet" href="../css/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -36,9 +37,6 @@
       body.dark .shadow-sm {
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5); /* Darker shadow */
       }
-      body.dark .bg-[#EBF2FF] {
-        background-color: #283750; /* Custom dark background for this section */
-      }
       body.dark .bg-gray-100 {
         background-color: #1a202c;
       }
@@ -51,61 +49,64 @@
     </style>
   </head>
   <body class="bg-gray-100 text-gray-800">
-    <header class="bg-white shadow-sm">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex-shrink-0">
-            <img
-              class="h-8 w-auto"
-              src="../Picture for Mini project/image 6-1.png"
-              alt="Vrean Logo"
-            />
+    <header
+      class="bg-white shadow-sm rounded-lg block sticky top-0 z-40"
+      data-aos="fade-down"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-white font-bold text-lg"
+          >
+            <img src="../Picture for Mini project/image 6-1.png" alt="" />
           </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
-              <a
-                href="./after-login.html"
-                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                >Home</a
-              >
-              <a
-                href="./about.html"
-                class="text-blue-600 font-semibold px-3 py-2 rounded-md text-sm font-medium"
-                aria-current="page"
-                >About Us</a
-              >
-              <a
-                href="./course.html"
-                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                >Courses</a
-              >
-              <a
-                href="./Blog.html"
-                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                >Blog</a
-              >
-              <a
-                href="./contact.html"
-                class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                >Contact</a
-              >
-            </div>
-          </div>
-          <div class="flex items-center space-x-4">
-            <button
-              id="darkModeToggle"
-              class="text-gray-500 hover:text-blue-600 focus:outline-none"
+          <span class="text-xl font-bold text-gray-800">VRean</span>
+        </div>
+
+        <ul class="hidden md:flex items-center space-x-8">
+          <li>
+            <a
+              href="./after-login.html"
+              class="text-gray-600 hover:text-blue-600"
+              >Home</a
             >
-              <i class="fas fa-moon text-xl"></i>
-            </button>
+          </li>
+          <li>
+            <a href="./about.html" class="text-gray-600 hover:text-blue-600"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./course.html" class="text-gray-600 hover:text-blue-600"
+              >Courses</a
+            >
+          </li>
+          <li>
+            <a href="./Blog.html" class="text-gray-600 hover:text-blue-600"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" class="text-gray-600 hover:text-blue-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="relative flex items-center gap-5">
+          <div
+            id="user-menu-button"
+            class="flex items-center space-x-4 cursor-pointer"
+          >
             <img
-              class="h-8 w-8 rounded-full"
-              src="../Picture for Mini project/teacher-hold.png"
-              alt="User Profile"
+              src="../Picture for Mini project/image 12-1.png"
+              alt="User Avatar"
+              class="w-10 h-10 rounded-full"
             />
           </div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -431,63 +432,83 @@
       </div>
     </main>
 
-     <footer class="footer-bg text-white py-12 px-6 md:px-12 lg:px-24 rounded-t-lg bg-blue-950">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        <!-- Organized By -->
+    <footer
+      class="footer-bg text-white py-12 px-6 md:px-12 lg:px-24 rounded-t-lg bg-blue-950"
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
         <div>
-            <h3 class="text-xl text-center font-bold mb-4">Organized By</h3>
-            <div class="flex flex-col items-center mb-2 text-center gap-5">
-                <img src="../Picture for Mini project/image 92-1.png" alt="Company A" class="h-20 w-20 rounded-full mr-2">
-                <p>Insitute of Science and Technology Advance Development</p>
-            </div>
-            
+          <h3 class="text-xl text-center font-bold mb-4">Organized By</h3>
+          <div class="flex flex-col items-center mb-2 text-center gap-5">
+            <img
+              src="../Picture for Mini project/image 92-1.png"
+              alt="Company A"
+              class="h-20 w-20 rounded-full mr-2"
+            />
+            <p>Insitute of Science and Technology Advance Development</p>
+          </div>
         </div>
 
-        <!-- Sponsored By -->
-        <div class="text-center  flex flex-col items-center">
-            <h3 class="text-xl font-bold mb-4">Sponsor By</h3>
-            <div class=" w-20 h-20 rounded-full bg-white flex flex-col justify-center items-center mb-5">
-                <img src="../Picture for Mini project/image 6-1.png" alt="">
-            </div>
-            <p>VRean</p>
+        <div class="text-center flex flex-col items-center">
+          <h3 class="text-xl font-bold mb-4">Sponsor By</h3>
+          <div
+            class="w-20 h-20 rounded-full bg-white flex flex-col justify-center items-center mb-5"
+          >
+            <img src="../Picture for Mini project/image 6-1.png" alt="" />
+          </div>
+          <p>VRean</p>
         </div>
 
-        <!-- Quick Links -->
         <div>
-            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Home</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Courses</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">About Us</a></li>
-            </ul>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="#" class="hover:text-blue-400">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="hover:text-blue-400">Courses</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="hover:text-blue-400">About Us</a>
+            </li>
+          </ul>
         </div>
 
-        <!-- Legal -->
         <div>
-            <h3 class="text-xl font-bold mb-4">Legal</h3>
-            <ul>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
-                <li class="mb-2"><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
-            </ul>
+          <h3 class="text-xl font-bold mb-4">Legal</h3>
+          <ul>
+            <li class="mb-2">
+              <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="hover:text-blue-400">Terms of Service</a>
+            </li>
+          </ul>
         </div>
 
-        <!-- Contact Us -->
         <div class="text-center">
-            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-            <div class="flex justify-center space-x-6 text-2xl">
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+          <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+          <div class="flex justify-center space-x-6 text-2xl">
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Bottom Social Section -->
-    <div class="text-center mt-8 pt-8 border-t border-gray-700">
-        
-        <p class="text-gray-500 text-sm mt-4">&copy; 2023 Vlearn. All rights reserved.</p>
-    </div>
+      <div class="text-center mt-8 pt-8 border-t border-gray-700">
+        <p class="text-gray-500 text-sm mt-4">
+          &copy; 2023 VRean. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -499,42 +520,6 @@
         // easing: 'ease-in-out', // default easing for AOS animations
         // delay: 100, // values from 0 to 3000, with step 50ms
         // offset: 120, // offset (in px) from the original trigger point
-      });
-
-      // Dark Mode Toggle Logic
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const body = document.body;
-      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-
-      // Function to set the theme
-      function setTheme(isDark) {
-        if (isDark) {
-          body.classList.add("dark");
-          darkModeToggle.innerHTML = '<i class="fas fa-sun text-xl"></i>'; // Sun icon for dark mode
-          localStorage.setItem("theme", "dark");
-        } else {
-          body.classList.remove("dark");
-          darkModeToggle.innerHTML = '<i class="fas fa-moon text-xl"></i>'; // Moon icon for light mode
-          localStorage.setItem("theme", "light");
-        }
-      }
-
-      // Check for saved theme preference or system preference on load
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        setTheme(savedTheme === "dark");
-      } else {
-        setTheme(prefersDarkMode.matches); // Use system preference
-      }
-
-      // Listen for changes in system dark mode preference
-      prefersDarkMode.addEventListener("change", (e) => {
-        setTheme(e.matches);
-      });
-
-      // Toggle theme on button click
-      darkModeToggle.addEventListener("click", () => {
-        setTheme(!body.classList.contains("dark"));
       });
     </script>
   </body>

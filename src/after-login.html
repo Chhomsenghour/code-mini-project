@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vlearn - Studying Online is now much easier</title>
+    <title>VRean - Studying Online is now much easier</title>
+    <link rel="stylesheet" href="../css/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -20,7 +21,7 @@
         background-color: #f8f9fa;
       }
       .hero-bg {
-        background-color: #3f51b5;
+        background-color: #172661;
       }
       .btn-primary {
         background-color: #4caf50; /* Green */
@@ -77,33 +78,90 @@
       .footer-bg {
         background-color: #212121; /* Dark grey */
       }
+      /* Dropdown specific styles */
+      .dropdown-menu {
+        display: none;
+      }
+      .dropdown-menu.active {
+        display: block;
+      }
     </style>
   </head>
   <body class="antialiased">
-     <header class="bg-white shadow-sm rounded-lg block sticky top-0 z-40" data-aos="fade-down">
-            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        <img src="../Picture for Mini project/image 6-1.png" alt="">
-                    </div>
-                    <span class="text-xl font-bold text-gray-800">E-Learning</span>
-                </div>
-    
-                <ul class="hidden md:flex items-center space-x-8">
-                    <li><a href="./after-login.html" class="text-gray-600 hover:text-blue-600">Home</a></li>
-                    <li><a href="./about.html" class="text-gray-600 hover:text-blue-600">About Us</a></li>
-                    <li><a href="./course.html" class="text-gray-600 hover:text-blue-600">Courses</a></li>
-                    <li><a href="./Blog.html" class="text-gray-600 hover:text-blue-600">Blog</a></li>
-                    <li><a href="./contact.html" class="text-gray-600 hover:text-blue-600">Contact</a></li>
-                </ul>
-                <div class="relative flex items-center gap-5">
-                    <i class=" text-2xl fa-solid fa-moon cursor-pointer"></i>
-                    <div id="user-menu-button" class="flex items-center space-x-4 cursor-pointer">
-                        <img src="../Picture for Mini project/image 12-1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <header
+      class="bg-white shadow-sm rounded-lg block sticky top-0 z-40"
+      data-aos="fade-down"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-white font-bold text-lg"
+          >
+            <img src="../Picture for Mini project/image 6-1.png" alt="" />
+          </div>
+          <span class="text-xl font-bold text-gray-800">VRean</span>
+        </div>
+
+        <ul class="hidden md:flex items-center space-x-8">
+          <li>
+            <a href="./after-login.html" class="text-gray-600 hover:text-blue-600"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="./about.html" class="text-gray-600 hover:text-blue-600"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="./course.html" class="text-gray-600 hover:text-blue-600"
+              >Courses</a
+            >
+          </li>
+          <li>
+            <a href="./Blog.html" class="text-gray-600 hover:text-blue-600"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" class="text-gray-600 hover:text-blue-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="relative flex items-center gap-5">
+          <div id="user-menu-button" class="flex items-center space-x-4 cursor-pointer">
+            <img
+              src="../Picture for Mini project/image 12-1.png"
+              alt="User Avatar"
+              class="w-10 h-10 rounded-full"
+            />
+          </div>
+          <div
+            id="user-dropdown"
+            class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 top-full"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >Profile</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >Settings</a
+            >
+            <a
+              href="../index.html"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <section
       class="hero-bg text-white py-10 md:py-0 px-6 md:px-12 lg:px-24 rounded-lg mt-8 mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between"
@@ -117,7 +175,7 @@
           Studying Online is now much easier
         </h1>
         <p class="text-lg mb-8">
-          Vlearn is an interesting platform that will teach you to learn an more
+          VRean is an interesting platform that will teach you to learn an more
           interactive way
         </p>
         <div
@@ -204,9 +262,14 @@
           />
           <h3 class="text-lg font-semibold text-gray-800">Jhon Cena</h3>
           <p class="text-blue-400">CEO & Founder</p>
-          <p class="mt-2">"Visionary leader driving <br> innovation."</p>
+          <p class="mt-2">"Visionary leader driving <br />innovation."</p>
         </div>
-        <div class="expert-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+        <div
+          class="expert-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
           <img
             src="../Picture for Mini project/image 100-1.png"
             alt="Expert 2"
@@ -214,9 +277,14 @@
           />
           <h3 class="text-lg font-semibold text-gray-800">Elum Musk</h3>
           <p class="text-blue-400">Lead Developer</p>
-          <p class="mt-2">"Crafting robust and scalable <br>solutions. "</p>
+          <p class="mt-2">"Crafting robust and scalable <br />solutions. "</p>
         </div>
-        <div class="expert-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+        <div
+          class="expert-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
           <img
             src="../Picture for Mini project/image 96-1.png"
             alt="Expert 3"
@@ -226,7 +294,12 @@
           <p class="text-blue-400">Product Manager</p>
           <p class="my-5">"Ensuring user needs are met"</p>
         </div>
-        <div class="expert-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+        <div
+          class="expert-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
           <img
             src="../Picture for Mini project/image 99-1.png"
             alt="Expert 4"
@@ -234,7 +307,7 @@
           />
           <h3 class="text-lg font-semibold text-gray-800">Jack Ma</h3>
           <p class="text-blue-400">Marketing speciallist</p>
-          <p class="mt-2">"Conecting with our <br>community. "</p>
+          <p class="mt-2">"Conecting with our <br />community. "</p>
         </div>
       </div>
     </section>
@@ -326,7 +399,7 @@
           <p class="text-blue-600 font-semibold mb-2 uppercase">Testimonial</p>
           <h2 class="text-3xl font-bold text-gray-800 mb-4">What They Say?</h2>
           <p class="text-gray-600 mb-6">
-            Vlearn has got more than 100% positive ratings from our users around
+            VRean has got more than 100% positive ratings from our users around
             the world.
           </p>
           <p class="text-gray-600">
@@ -497,13 +570,30 @@
 
       <div class="text-center mt-8 pt-8 border-t border-gray-700">
         <p class="text-gray-500 text-sm mt-4">
-          &copy; 2023 Vlearn. All rights reserved.
+          &copy; 2023 VRean. All rights reserved.
         </p>
       </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      // JavaScript for dropdown functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const userMenuButton = document.getElementById('user-menu-button');
+        const userDropdown = document.getElementById('user-dropdown');
+
+        userMenuButton.addEventListener('click', function () {
+          userDropdown.classList.toggle('active');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', function (event) {
+          if (!userMenuButton.contains(event.target) && !userDropdown.contains(event.target)) {
+            userDropdown.classList.remove('active');
+          }
+        });
+      });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
   </body>

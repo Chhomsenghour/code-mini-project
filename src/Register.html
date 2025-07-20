@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SignUp to VRean</title>
+  <link rel="stylesheet" href="../css/output.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -15,30 +16,81 @@
         opacity: 0;
         pointer-events: none;
     }
-    
+
     /* Show password when checkbox is checked */
     .password-toggle:checked + .password-wrapper .password-input {
         -webkit-text-security: none;
         /* text-security: none;   */
     }
-    
+
     /* Change eye icon when checked */
     .password-toggle:checked + .password-wrapper .eye-open {
         display: none;
     }
-    
+
     .password-toggle:checked + .password-wrapper .eye-closed {
         display: block;
     }
-    
+
     .eye-closed {
         display: none;
     }
-    
+
     /* Make sure password is hidden by default */
     .password-input {
         -webkit-text-security: disc;
         /* text-security: disc;  */
+    }
+
+    /* Styles for the loading/success pop-up */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .popup-overlay.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+
+    .popup-overlay.show .popup-content {
+      transform: scale(1);
+    }
+
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
@@ -61,31 +113,34 @@
         <span class="px-6 py-2 bg-blue-400 text-white rounded-xl font-medium mb-1"><a href="./Login.html">Log In</a></span>
         <span class="px-6 py-2 bg-blue-600 text-white rounded-xl font-medium shadow mb-1"><a href="./Register.html">Sign Up</a></span>
       </div>
-      <form class="space-y-6 mt-10">
+      <form id="signupForm" class="space-y-6 mt-10">
 
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1`">Email Address</label>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
           <input type="email" id="email" name="email" placeholder="Enter your Email Address"
                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-blue-500 focus:border-blue-500 transition">
+          <span id="emailError" class="text-red-500 text-sm mt-1 hidden">Email address is required.</span>
         </div>
 
         <div>
           <label for="username" class="block text-sm font-medium text-gray-700 mb-1">User name</label>
           <input type="text" id="username" name="username" placeholder="Enter your User name"
                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-blue-500 focus:border-blue-500 transition">
+          <span id="usernameError" class="text-red-500 text-sm mt-1 hidden">User name is required.</span>
         </div>
 
         <div class="mb-1 mt-5">
-    
+
           <label for="password" class="block text-sm text-gray-700 font-medium mb-1">Password</label>
           <input type="checkbox" id="togglePassword" class="password-toggle">
-          
+
           <div class="password-wrapper relative">
-              <input type="text" id="password" name="password" placeholder="Enter your Password"
-                  class="password-input w-full px-4 py-2 mb-5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10" 
-                  autocomplete="current-password" required/>
-              
-              <label for="togglePassword" class="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer mb-5" 
+              <input type="password" id="password" name="password" placeholder="Enter your Password"
+                  class="password-input w-full px-4 py-2 mb-5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
+                  autocomplete="current-password"/>
+              <span id="passwordError" class="text-red-500 text-sm mt-1 hidden">Password is required.</span>
+
+              <label for="togglePassword" class="absolute inset-y-0 right-3 flex items-center text-gray-500 cursor-pointer mb-5"
                   aria-label="Toggle password visibility">
                   <svg class="eye-open h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -101,12 +156,101 @@
               </label>
           </div>
         </div>
-        
-        <button type="submit" class=" w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium shadow-md hover:from-blue-600 hover:to-blue-700 transition">
-          <a href="./after-login.html">Sign Up</a>
+
+        <button type="submit" id="signupButton" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium shadow-md hover:from-blue-600 hover:to-blue-700 transition">
+          Sign Up
         </button>
       </form>
     </div>
   </div>
+
+  <div id="popupOverlay" class="popup-overlay">
+    <div id="popupContent" class="popup-content">
+      <div id="loader" class="loader"></div>
+      <p id="popupMessage" class="text-lg font-semibold text-gray-700">Signing Up...</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const signupForm = document.getElementById('signupForm');
+      const emailInput = document.getElementById('email');
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password'); // This is already the correct input
+      const emailError = document.getElementById('emailError');
+      const usernameError = document.getElementById('usernameError');
+      const passwordError = document.getElementById('passwordError');
+      const signupButton = document.getElementById('signupButton');
+      const popupOverlay = document.getElementById('popupOverlay');
+      const popupContent = document.getElementById('popupContent');
+      const loader = document.getElementById('loader');
+      const popupMessage = document.getElementById('popupMessage');
+      const togglePassword = document.getElementById('togglePassword');
+
+      // Toggle password visibility
+      togglePassword.addEventListener('change', function() {
+          if (this.checked) {
+              passwordInput.setAttribute('type', 'text');
+          } else {
+              passwordInput.setAttribute('type', 'password');
+          }
+      });
+
+      signupForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let isValid = true;
+
+        // Validate Email
+        if (emailInput.value.trim() === '') {
+          emailError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          emailError.classList.add('hidden');
+        }
+
+        // Validate Username
+        if (usernameInput.value.trim() === '') {
+          usernameError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          usernameError.classList.add('hidden');
+        }
+
+        // Validate Password
+        if (passwordInput.value.trim() === '') {
+          passwordError.classList.remove('hidden');
+          isValid = false;
+        } else {
+          passwordError.classList.add('hidden');
+        }
+
+        if (!isValid) {
+          return; // Stop if any field is invalid
+        }
+
+        // If all fields are valid, proceed with showing the loading pop-up
+        popupOverlay.classList.add('show');
+        loader.style.display = 'block';
+        popupMessage.textContent = 'Signing Up...';
+
+        // Simulate an API call or registration process
+        setTimeout(() => {
+          // Hide loader and display success message
+          loader.style.display = 'none';
+          popupMessage.textContent = 'Sign Up Successfully!';
+          popupContent.classList.add('scale-105'); // Optional: slightly scale up for effect
+
+          // After a short delay, hide the pop-up and redirect
+          setTimeout(() => {
+            popupOverlay.classList.remove('show');
+            popupContent.classList.remove('scale-105');
+            // Redirect to after-login.html upon successful signup
+            window.location.href = './after-login.html';
+          }, 1500); // Display success message for 1.5 seconds
+        }, 2000); // Simulate 2 seconds loading time
+      });
+    });
+  </script>
 </body>
 </html>
